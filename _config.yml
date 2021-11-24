@@ -18,16 +18,16 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : https://jinseok-dev.github.io # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Your Site Title
+title   : Jinseok Kim's blog
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  Jinseok Kim's blog
 
 
 ## => Language and Timezone
 ##############################
-lang: # the language of your site, default as "en"
+lang: ko # the language of your site, default as "en"
 timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for the available values
 
 
@@ -35,11 +35,11 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : Your Name
+  name      : Jinseok Kim
   url       :
   avatar    : # path or url of avatar image (square)
-  bio       : I am an amazing person.
-  email     :
+  bio       : I am a **Software Developer**.
+  email     : kim-jinseok@naver.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -49,7 +49,7 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : https://github.com/jinseok-dev # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
@@ -184,15 +184,20 @@ highlighter : rouge
 permalink   : date
 
 exclude:
+  - CHANGELOG.md
+  - HOW_TO_RELEASE.md
   - Gemfile
   - Gemfile.lock
   - LICENSE
+  - README-*.md
   - README.md
   - gulpfile.js
   - jekyll-text-theme.gemspec
   - package-lock.json
   - package.json
+  - /docs
   - /node_modules
+  - /screenshots
   - /test
   - /vendor
 
@@ -202,12 +207,12 @@ defaults:
       type: posts
     values:
       layout: article
-      sharing: true
-      license: true
+      sharing: false
+      license: false
       aside:
-        toc: true
-      show_edit_on_github: true
-      show_subscribe: true
+        toc: false
+      show_edit_on_github: false
+      show_subscribe: false
       pageview: true
 
 
